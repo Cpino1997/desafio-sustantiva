@@ -3,6 +3,7 @@
   max-width: 330px;
   padding: 15px;
   margin: auto;
+  background: transparent;
 }
 
 .form-signin .form-floating:focus-within {

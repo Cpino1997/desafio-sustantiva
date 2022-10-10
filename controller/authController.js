@@ -5,21 +5,21 @@ const {promisify} = require('util')
 
 //metodo Registro
 exports.registro = async (req, res)=>{
-   try {
-      const user = req.body.user;
-      const correo = req.body.correo;
-      const pass = req.body.pass;
-      let passHash = await bcryptjs.hash(pass, 8)
-      console.log(passHash)
-      conn.query('INSERT INTO usuarios SET ? ',{usuario:user ,correo:correo, contraseña:passHash},(error , results)=>{
-         if(error){console.log(error)}
-         res.redirect('/dash')
-      })
-      } catch (error) {
-         console.log(error)
+      try {
+         
+         const user = req.body.user;
+         const correo = req.body.correo;
+         const pass = req.body.pass;
+         let passHash = await bcryptjs.hash(pass, 8)
+         console.log(passHash)
+         conn.query('INSERT INTO usuarios SET ? ',{usuario:user ,correo:correo, contraseña:passHash},(error , results)=>{
+            if(error){console.log(error)}
+            res.redirect('/login')
+         })
+         } catch (error) {
+            console.log(error)
+      }
    }
-   
-}
 
 //metodo Login
 exports.login = async (req, res)=>{
@@ -72,7 +72,7 @@ exports.login = async (req, res)=>{
                   alertIcon:"success",
                   showConfirmButton:true,
                   timer: 800,
-                  ruta: ''
+                  ruta: 'dash'
                })
             }
          })
@@ -100,6 +100,7 @@ exports.isAuthenticated = async (req, res, next)=>{
       }
    }else{
       //si los datos no son validos, los enviaremos a la pagina de login 
+      console.log('error en el usuario')
       res.redirect('/login')
    }
 }

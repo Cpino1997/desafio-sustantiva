@@ -4,8 +4,11 @@
     font-family: monospace;
 }
 html{
-    background-image: url('/img/fondo.png');
+    background-image: url('/img/fondo.png') ;
     background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
 }
 body{
     background: transparent;
