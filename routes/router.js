@@ -20,6 +20,10 @@ router.get('/registro', (req,res)=>{
 router.get('/ping',(req,res)=>{
    res.send('pong')
 })
+//ruta perfil
+router.get('/perfil', authController.isAuthenticated, (req,res)=>{
+    res.render('perfil',{user:req.user})
+})
 
 //router para los metodos post del authController
 router.post('/registro', authController.registro)

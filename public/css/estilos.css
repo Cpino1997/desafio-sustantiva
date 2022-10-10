@@ -16,3 +16,6 @@ body{
 .h2{
     color: whitesmoke;
 }
+#app{
+    display: none;
+}
