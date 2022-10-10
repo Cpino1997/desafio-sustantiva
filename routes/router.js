@@ -29,6 +29,8 @@ router.get('/perfil', authController.isAuthenticated, (req,res)=>{
 router.post('/registro', authController.registro)
 router.post('/login', authController.login)
 router.get('/logout', authController.logout)
+router.put('/actualizarUser', authController.putUser)
+router.delete('/deleteUser', authController.delUser)
 
 
 module.exports = router

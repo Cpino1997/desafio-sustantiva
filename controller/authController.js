@@ -109,3 +109,11 @@ exports.logout = (req, res) => {
    res.clearCookie('jwt')
    return res.redirect('/')
 }
+
+//metodo delete
+exports.delUser = (req,res) =>{
+   res.send("deleteUser");
+}
+exports.putUser = (req,res) =>{
+   res.send({message:"updateUser"});
+}
