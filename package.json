@@ -2,7 +2,7 @@
   "name": "desafio-sustantiva",
   "version": "1.0.0",
   "description": "En los desafios propuestos en el documento de sustantiva no encontraremos una guia, lo que si les dejare el ejercicio desarrollado, con las herramientas anteriormente entregadas deberian ser capaces de entender el codigo y poder generar un api similar.",
-  "main": "app.js",
+  "main": "nodemon app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,9 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
     "express": "^4.18.1",
-    "mysql": "^2.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
     "nodemon": "^2.0.20"
   },
   "bugs": {

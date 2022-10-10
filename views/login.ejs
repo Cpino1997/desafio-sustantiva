@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Pinolabs and Bootstrap contributors">
+    <meta name="generator" content="Hugo+pinolabs v1.0">
+    <title>Test JWT</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin text-center shadow-lg ">
+  <form id="formLogin" action="/login" method="post">
+    <img alt="logo" class="thumb" data-pin-no-hover="true" src="https://img.freepik.com/iconos-gratis/usb_318-926247.jpg" width="128" height="128">
+    <h1 class="h3 mb-3 fw-normal">Ingreso</h1>
+<br>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="user" name="user" placeholder="juanitoJWT">
+      <label for="usuario">Usuario</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input type="password" class="form-control" name="pass" id="pass" placeholder="Contraseña!">
+      <label for="pass">Contraseña</label>
+    </div>
+    <br>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Ingresar</button>
+    
+  </form>
+  <br>
+  <a href="/registro" class="w-100 btn btn-lg btn-bd-primary">Registrarte</a>
+  <br>
+  <p class="mt-5 mb-3 text-muted">&copy; Pinolabs 2022</p>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(alert){ %>
+      <script>
+        Swal.fire({
+          title : '<%= alertTitle %>',
+          text : '<%=  alertMenssage %>',
+          icon : '<%=  alertIcon %>',
+          showConfirmButton : <%= showConfirmButton %>,
+          timer : <%=  timer %>
+        }).then(()=>{
+          window.location = '/<%= ruta %>'
+        })
+      </script>
+    <% } %>
+
+</body>
+</html>

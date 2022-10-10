@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Pinolabs and Bootstrap contributors">
+    <meta name="generator" content="Hugo+pinolabs v1.0">
+    <title>Test JWT</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin text-center shadow-lg ">
+  <form id="formLogin" action="/registro" method="post">
+    <img class="thumb" alt="logo" data-pin-no-hover="true" src="https://img.freepik.com/iconos-gratis/usb_318-926247.jpg" width="128" height="128">
+    <h1 class="h3 mb-3 fw-normal">Registro</h1>
+<br>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="user" name="user" placeholder="juanitoJWT">
+      <label for="user">Usuario</label>
+    </div>
+    <br>
+    <div class="form-floating">
+        <input type="email" class="form-control" id="correo" name="correo" placeholder="juanitoJWT@gmail.com">
+        <label for="correo">Correo</label>
+      </div>
+      <br>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña!">
+      <label for="pass">Contraseña</label>
+    </div>
+    <br>
+    <button class="w-100 btn btn-lg btn-bd-primary" type="submit">Registrarte</button>
+  </form>
+  <br>
+  <a href="/login" class="w-100 btn btn-lg btn-primary">Ingresar</a>
+  <br>
+  <p class="mt-5 mb-3 text-muted">&copy; Pinolabs –2022</p>
+</main>
+
+    
+  </body>
+</html>

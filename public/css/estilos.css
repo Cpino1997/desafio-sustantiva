@@ -1,0 +1,15 @@
+.center{
+    text-align: center;
+    margin: auto;
+    font-family: monospace;
+}
+html{
+    background-image: url('/img/fondo.png');
+    background-size: cover;
+}
+body{
+    background: transparent;
+}
+.h2{
+    color: whitesmoke;
+}
